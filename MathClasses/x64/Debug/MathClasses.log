@@ -1,0 +1,16 @@
+﻿  main.cpp
+  Matrix3.cpp
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Vector3.h(24,22): error C2061: syntax error: identifier 'Matrix3'
+  Sphere.cpp
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Vector3.h(24,22): error C2061: syntax error: identifier 'Matrix3'
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.h(16,16): error C2061: syntax error: identifier 'AABB'
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(52,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(73,28): warning C4244: 'argument': conversion from 'unsigned __int64' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(96,28): error C2761: 'Overlaps': redeclaration of member is not allowed
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(96,23): error C2065: 'AABB': undeclared identifier
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(96,28): error C2146: syntax error: missing ')' before identifier 'aabb'
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(97,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(97,1): error C2447: '{': missing function header (old-style formal list?)
+  Vector3.cpp
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Vector3.h(24,22): error C2061: syntax error: identifier 'Matrix3'
+  Generating Code...
