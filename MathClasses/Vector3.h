@@ -1,3 +1,4 @@
+#pragma once
 class Vector3
 {
 public:
@@ -5,7 +6,7 @@ public:
 	Vector3();
 	Vector3(float x, float y, float z);
 	Vector3 operator + (Vector3 other);
-	Vector3 operator += (Vector3 other);
+	Vector3& operator += (Vector3 other);
 	Vector3 operator - (Vector3 other);
 	Vector3 operator * (Vector3 other);
 	Vector3 operator * (float other);
@@ -21,7 +22,6 @@ public:
 	float Dot(Vector3 other);
 	Vector3 Cross(Vector3 other);
 	float AngleBetween(Vector3 other);
-	Vector3 operator * (Matrix3 other);
 	Vector3 Min(Vector3 a, Vector3 b);
 	Vector3 Max(Vector3 a, Vector3 b);
 	Vector3 Clamp(Vector3 t, Vector3 a, Vector3 b);

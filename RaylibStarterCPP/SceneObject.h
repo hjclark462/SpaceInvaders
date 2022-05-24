@@ -1,23 +1,28 @@
 #pragma once
 #include "raylib.h"
-#include "raymath.h"
+#include "Vector3.h"
+#include "Matrix3.h"
 #include <vector>
 using namespace std;
 
 class SceneObject
 {
 protected:
-	SceneObject* parent;
+	SceneObject* parent = nullptr;
 	vector<SceneObject> children;
-	Matrix localTransform;
-	Matrix globalTransorm;
+	Matrix3 localTransform = {1};
+	Matrix3 globalTransform = {1};
 public:
 	SceneObject();
 	~SceneObject();
+	bool operator == (SceneObject & other);
 	void UpdateTransform();
-	void SetPosition();
-	void SetRotate();
-	void SetScale();
+	void SetPosition(float x, float y);
+	void SetRotate(float radians);
+	void SetScale(float width, float height);
+	virtual void Translate(float x, float y);
+	void Rotate(float radians);
+	void Scale(float width, float height);
 	int GetChildCount();
 	SceneObject GetChild(int index);
 	void AddChild(SceneObject child);

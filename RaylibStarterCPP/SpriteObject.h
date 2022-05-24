@@ -8,8 +8,8 @@ class SpriteObject : public SceneObject
 	Image image;
 public:
 	Texture2D texture;
-	float width;
-	float height;
+	float width = texture.width;
+	float height = texture.height;
 	SpriteObject();
 	void Load(string filname);
 	void OnDraw() override;
