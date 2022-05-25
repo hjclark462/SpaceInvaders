@@ -13,7 +13,7 @@ Matrix3::Matrix3(float m00, float m01, float m02, float m10, float m11, float m1
 	this->m20 = m20; this->m21 = m21; this->m22 = m22;
 }
 
-Matrix3::Matrix3(Vector3 X, Vector3 Y, Vector3 Z)
+Matrix3::Matrix3(Vectr3 X, Vectr3 Y, Vectr3 Z)
 {
 	this->m00 = X.x; this->m01 = X.y; this->m02 = X.z;
 	this->m10 = Y.x; this->m11 = Y.y; this->m12 = Y.z;
@@ -45,7 +45,7 @@ void Matrix3::SetScale(float x, float y, float z)
 	m20 = 0; m21 = 0; m22 = z;
 }
 
-void Matrix3::SetScale(Vector3 other)
+void Matrix3::SetScale(Vectr3 other)
 {
 	m00 = other.x; m01 = 0; m02 = 0;
 	m10 = 0; m11 = other.y; m12 = 0;
@@ -59,7 +59,7 @@ void Matrix3::Scale(float x, float y, float z)
 	Set(*this * m);
 }
 
-void Matrix3::Scale(Vector3 other)
+void Matrix3::Scale(Vectr3 other)
 {
 	Matrix3 m;
 	m.SetScale(other.x, other.y, other.z);
@@ -126,21 +126,13 @@ Matrix3 Matrix3::operator*(Matrix3 other)
 		m00 * other.m20 + m10 * other.m21 + m20 * other.m22, m01 * other.m20 + m11 * other.m21 + m21 * other.m22, m02 * other.m20 + m12 * other.m21 + m22 * other.m22);
 }
 
-Vector3 Matrix3::operator*(Vector3 other)
+Vectr3 Matrix3::operator*(Vectr3 other)
 {
-	return Vector3(
+	return Vectr3(
 		other.x * m00 + other.y * m10 + other.z * m20,
 		other.x * m01 + other.y * m11 + other.z * m21,
 		other.x * m02 + other.y * m12 + other.z * m22);
 }
-
-bool Matrix3::operator==(Matrix3 other)
-{
-	return(m00 == other.m00 && m01 == other.m01 && m02 == other.m02
-		&& m10 == other.m10 && m11 == other.m11 && m12 == other.m12
-		&& m20 == other.m20 && m21 == other.m21 && m22 == other.m22);
-}
-
 
 void Matrix3::SetTranslation(float x, float y)
 {

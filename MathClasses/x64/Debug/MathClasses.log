@@ -1,26 +1,18 @@
-﻿  Matrix3.cpp
-  AABB.cpp
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(9,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(8,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(7,55): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(12,6): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(11,6): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(10,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.cpp(35,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.cpp(34,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.cpp(33,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.cpp(38,3): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.cpp(37,3): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.cpp(36,16): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+﻿  AABB.cpp
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(39,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(38,40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(37,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(42,3): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(41,3): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(40,15): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(66,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(65,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(64,50): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(69,13): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(68,13): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\AABB.cpp(67,13): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Sphere.cpp
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(9,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(8,43): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(7,55): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(12,6): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(11,6): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\AABB.h(10,18): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\Sphere.cpp(52,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\AIE\SpaceInvaders\MathClasses\Sphere.cpp(73,28): warning C4244: 'argument': conversion from 'unsigned __int64' to 'float', possible loss of data
-  Vector3.cpp
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(53,17): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Sphere.cpp(74,28): warning C4244: 'argument': conversion from 'unsigned __int64' to 'float', possible loss of data
   Generating Code...
-  MathClasses.vcxproj -> D:\AIE\SpaceInvaders\x64\Debug\MathClasses.lib
+  MathClasses.vcxproj -> C:\Users\s201403\Documents\GitHub\SpaceInvaders\x64\Debug\MathClasses.lib

@@ -3,29 +3,24 @@
   "ProjectMap": {
     "66f97e22-5e02-4257-b75c-da71b7a17bff": {
       "ProjectGuid": "66f97e22-5e02-4257-b75c-da71b7a17bff",
-      "DisplayName": "RaylibStarterCPP",
+      "DisplayName": "SpaceInvaders",
       "ColorIndex": 0
-    },
-    "f660ff67-d70e-4ae0-9080-d922243e9b6e": {
-      "ProjectGuid": "f660ff67-d70e-4ae0-9080-d922243e9b6e",
-      "DisplayName": "Raylib",
-      "ColorIndex": 1
-    },
-    "5410fc57-321e-43d5-837c-7a47033041b8": {
-      "ProjectGuid": "5410fc57-321e-43d5-837c-7a47033041b8",
-      "DisplayName": "RayGUI_Widgets",
-      "ColorIndex": 2
-    },
-    "1e10da3d-2ddc-403d-a07d-ea0788da1995": {
-      "ProjectGuid": "1e10da3d-2ddc-403d-a07d-ea0788da1995",
-      "DisplayName": "MathClasses",
-      "ColorIndex": 3
     },
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "1e10da3d-2ddc-403d-a07d-ea0788da1995": {
+      "ProjectGuid": "1e10da3d-2ddc-403d-a07d-ea0788da1995",
+      "DisplayName": "MathClasses",
+      "ColorIndex": 1
+    },
+    "f660ff67-d70e-4ae0-9080-d922243e9b6e": {
+      "ProjectGuid": "f660ff67-d70e-4ae0-9080-d922243e9b6e",
+      "DisplayName": "Raylib",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 3
 }
