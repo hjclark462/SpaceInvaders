@@ -2,26 +2,26 @@
 #include <math.h>
 #include <algorithm>
 
-Vectr3::Vectr3()
+Vector3::Vector3()
 {
 	x = 0.0f;
 	y = 0.0f;
 	z = 0.0f;
 }
 
-Vectr3::Vectr3(float x, float y, float z)
+Vector3::Vector3(float x, float y, float z)
 {
 	this->x = x;
 	this->y = y;
 	this->z = z;
 }
 
-Vectr3 Vectr3::operator+(Vectr3 other)
+Vector3 Vector3::operator+(Vector3 other)
 {
-	return Vectr3(x + other.x, y + other.y, z + other.z);
+	return Vector3(x + other.x, y + other.y, z + other.z);
 }
 
-Vectr3& Vectr3::operator+=(Vectr3 other)
+Vector3& Vector3::operator+=(Vector3 other)
 {
 	x += other.x;
 	y += other.y;
@@ -29,48 +29,48 @@ Vectr3& Vectr3::operator+=(Vectr3 other)
 	return *this;
 }
 
-Vectr3 Vectr3::operator-(Vectr3 other)
+Vector3 Vector3::operator-(Vector3 other)
 {
-	return Vectr3(x - other.x, y - other.y, z - other.z);
+	return Vector3(x - other.x, y - other.y, z - other.z);
 }
 
-Vectr3 Vectr3::operator*(Vectr3 other)
+Vector3 Vector3::operator*(Vector3 other)
 {
-	return Vectr3(x * other.x, y * other.y, z * other.z);
+	return Vector3(x * other.x, y * other.y, z * other.z);
 }
 
-Vectr3 Vectr3::operator*(float other)
+Vector3 Vector3::operator*(float other)
 {
-	return Vectr3(x * other, y * other, z * other);
+	return Vector3(x * other, y * other, z * other);
 }
 
-Vectr3 Vectr3::operator/(Vectr3 other)
+Vector3 Vector3::operator/(Vector3 other)
 {
-	return Vectr3(x / other.x, y / other.y, z / other.z);
+	return Vector3(x / other.x, y / other.y, z / other.z);
 }
 
-Vectr3 Vectr3::operator/(float other)
+Vector3 Vector3::operator/(float other)
 {
-	return Vectr3(x / other, y / other, z / other);
+	return Vector3(x / other, y / other, z / other);
 }
 
-float Vectr3::Magnitude()
+float Vector3::Magnitude()
 {
 	return (float)sqrt((double)x * x + y * y + z * z);
 }
 
-float Vectr3::MagnitudeSqr()
+float Vector3::MagnitudeSqr()
 {
 	return x * x + y * y + z * z;
 }
 
-float Vectr3::Distance(Vectr3 other)
+float Vector3::Distance(Vector3 other)
 {
-	Vectr3 diff = *this - other;
+	Vector3 diff = *this - other;
 	return (float)sqrt((double)diff.x * diff.x + diff.y * diff.y + diff.z * diff.z);
 }
 
-void Vectr3::Normalize()
+void Vector3::Normalize()
 {
 	float m = Magnitude();
 	x /= m;
@@ -78,54 +78,54 @@ void Vectr3::Normalize()
 	z /= m;
 }
 
-Vectr3 Vectr3::GetNormalised()
+Vector3 Vector3::GetNormalised()
 {
 	return (*this / Magnitude());
 }
 
-Vectr3 Vectr3::GetPerpendicularRH()
+Vector3 Vector3::GetPerpendicularRH()
 {
-	return Vectr3(-y, x, 0);
+	return Vector3(-y, x, 0);
 }
 
-Vectr3 Vectr3::GetPerpendicularLH()
+Vector3 Vector3::GetPerpendicularLH()
 {
-	return Vectr3(y, -x, 0);
+	return Vector3(y, -x, 0);
 }
 
-float Vectr3::Dot(Vectr3 other)
+float Vector3::Dot(Vector3 other)
 {
 	return x * other.x + y* other.y + z* other.z;
 }
 
-Vectr3 Vectr3::Cross(Vectr3 other)
+Vector3 Vector3::Cross(Vector3 other)
 {
-	return Vectr3(
+	return Vector3(
 		y * other.z - z * other.y,
 		z * other.x - x * other.z,
 		x * other.y - y * other.x);
 }
 
-float Vectr3::AngleBetween(Vectr3 other)
+float Vector3::AngleBetween(Vector3 other)
 {
-	Vectr3 a = GetNormalised();
-	Vectr3 b = other.GetNormalised();
+	Vector3 a = GetNormalised();
+	Vector3 b = other.GetNormalised();
 	float d = a.x * b.x + a.y * b.y + a.z * b.z;
 	return (float)acos(d);
 }
 
 
-Vectr3 Vectr3::Min(Vectr3 a, Vectr3 b)
+Vector3 Vector3::Min(Vector3 a, Vector3 b)
 {
-	return Vectr3(std::min(a.x, b.x), std::min(a.y, b.y), std::min(a.z, b.z));
+	return Vector3(std::min(a.x, b.x), std::min(a.y, b.y), std::min(a.z, b.z));
 }
 
-Vectr3 Vectr3::Max(Vectr3 a, Vectr3 b)
+Vector3 Vector3::Max(Vector3 a, Vector3 b)
 {
-	return Vectr3(std::max(a.x, b.x), std::max(a.y, b.y), std::max(a.z, b.z));
+	return Vector3(std::max(a.x, b.x), std::max(a.y, b.y), std::max(a.z, b.z));
 }
 
-Vectr3 Vectr3::Clamp(Vectr3 t, Vectr3 a, Vectr3 b)
+Vector3 Vector3::Clamp(Vector3 t, Vector3 a, Vector3 b)
 {
 	return Max(a, Min(b, t));
 }

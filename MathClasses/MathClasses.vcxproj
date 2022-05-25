@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Matrix3.cpp" />
     <ClCompile Include="AABB.cpp" />
     <ClCompile Include="Sphere.cpp" />
