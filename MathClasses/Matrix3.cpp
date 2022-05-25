@@ -134,14 +134,6 @@ Vector3 Matrix3::operator*(Vector3 other)
 		other.x * m02 + other.y * m12 + other.z * m22);
 }
 
-bool Matrix3::operator==(Matrix3 other)
-{
-	return(m00 == other.m00 && m01 == other.m01 && m02 == other.m02
-		&& m10 == other.m10 && m11 == other.m11 && m12 == other.m12
-		&& m20 == other.m20 && m21 == other.m21 && m22 == other.m22);
-}
-
-
 void Matrix3::SetTranslation(float x, float y)
 {
 	m20 = x; m21 = y;

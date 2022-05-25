@@ -15,7 +15,6 @@ protected:
 public:
 	SceneObject();
 	~SceneObject();
-	bool operator == (SceneObject & other);
 	void UpdateTransform();
 	void SetPosition(float x, float y);
 	void SetRotate(float radians);
@@ -25,8 +24,6 @@ public:
 	void Scale(float width, float height);
 	int GetChildCount();
 	SceneObject GetChild(int index);
-	void AddChild(SceneObject child);
-	void RemoveChild(SceneObject child);
 	virtual void OnUpdate(float deltaTime);
 	virtual void OnDraw();
 	void Update(float deltaTime);

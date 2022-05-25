@@ -9,22 +9,7 @@ SceneObject::SceneObject()
 
 SceneObject::~SceneObject()
 {
-	if (parent != nullptr)
-	{
-		parent->RemoveChild(*this);
-	}
-	for (SceneObject so : children)
-	{
-		so.parent = nullptr;
-	}
-}
-
-bool SceneObject::operator== (SceneObject & other)
-{
-	return (parent == other.parent 
-		&& children == other.children 
-		&& localTransform == other.localTransform
-		&& globalTransform == other.globalTransform);
+	
 }
 
 void SceneObject::UpdateTransform()
@@ -87,25 +72,6 @@ int SceneObject::GetChildCount()
 SceneObject SceneObject::GetChild(int index)
 {
 	return children[index];
-}
-
-void SceneObject::AddChild(SceneObject child)
-{
-	assert(child.parent == nullptr);
-	child.parent = this;
-	children.push_back(child);
-}
-
-void SceneObject::RemoveChild(SceneObject child)
-{
-	for (int i = 0; i < children.size(); i++)
-	{
-		if (children[i] == child)
-		{
-			children.erase(children.begin() + (i-1));
-			child.parent = nullptr;
-		}
-	}
 }
 
 void SceneObject::OnUpdate(float deltaTime)

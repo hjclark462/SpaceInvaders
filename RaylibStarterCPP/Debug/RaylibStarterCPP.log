@@ -1,7 +1,11 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(510,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (RaylibStarterCPP.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   SceneObject.cpp
-D:\AIE\SpaceInvaders\MathClasses\Vector3.h(2,1): error C2011: 'Vector3': 'struct' type redefinition
-D:\AIE\SpaceInvaders\Raylib\include\raylib.h(180): message : see declaration of 'Vector3'
-D:\AIE\SpaceInvaders\MathClasses\Vector3.h(2,1): warning C4099: 'Vector3': type name first seen using 'struct' now seen using 'class'
-D:\AIE\SpaceInvaders\MathClasses\Vector3.h(1): message : see declaration of 'Vector3'
-D:\AIE\SpaceInvaders\RaylibStarterCPP\SceneObject.cpp(48,1): error C2723: 'SceneObject::Translate': 'virtual' specifier illegal on function definition
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Vector3.h(3,1): error C2011: 'Vector3': 'struct' type redefinition
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\Raylib\include\raylib.h(180): message : see declaration of 'Vector3'
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\RaylibStarterCPP\SceneObject.cpp(93,20): warning C4018: '<': signed/unsigned mismatch
+  SpriteObject.cpp
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\MathClasses\Vector3.h(3,1): error C2011: 'Vector3': 'struct' type redefinition
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\Raylib\include\raylib.h(180): message : see declaration of 'Vector3'
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\RaylibStarterCPP\SpriteObject.h(11,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\s201403\Documents\GitHub\SpaceInvaders\RaylibStarterCPP\SpriteObject.h(12,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Generating Code...

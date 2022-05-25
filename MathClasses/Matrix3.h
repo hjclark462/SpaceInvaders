@@ -24,8 +24,7 @@ public:
 	void RotateZ(double radians);
 	void SetEuler(float pitch, float yaw, float roll);
 	Matrix3 operator * (Matrix3 other);
-	Vector3 operator * (Vector3 other);
-	bool operator == (Matrix3 other);
+	Vector3 operator * (Vector3 other);	
 	void SetTranslation(float x, float y);
 	void Translate(float x, float y);
 };
