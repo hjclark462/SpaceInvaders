@@ -168,20 +168,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SceneObject.cpp" />
-    <ClCompile Include="SpriteObject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CollisionObject.h" />
-    <ClInclude Include="SceneObject.h" />
-    <ClInclude Include="Spaceship.h" />
-    <ClInclude Include="SpriteObject.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MathClasses\MathClasses.vcxproj">
-      <Project>{1e10da3d-2ddc-403d-a07d-ea0788da1995}</Project>
-    </ProjectReference>
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

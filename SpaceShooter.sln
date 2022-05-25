@@ -9,8 +9,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Raylib", "Raylib\Bindings\R
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayGUI_Widgets", "RayGUI_Widgets\RayGUI_Widgets.vcxproj", "{5410FC57-321E-43D5-837C-7A47033041B8}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathClasses", "MathClasses\MathClasses.vcxproj", "{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Raylib\Bindings\Raylib.projitems*{f660ff67-d70e-4ae0-9080-d922243e9b6e}*SharedItemsImports = 13
@@ -47,18 +45,6 @@ Global
 		{5410FC57-321E-43D5-837C-7A47033041B8}.Release|x64.Build.0 = Release|x64
 		{5410FC57-321E-43D5-837C-7A47033041B8}.Release|x86.ActiveCfg = Release|Win32
 		{5410FC57-321E-43D5-837C-7A47033041B8}.Release|x86.Build.0 = Release|Win32
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Debug|Any CPU.Build.0 = Debug|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Debug|x64.ActiveCfg = Debug|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Debug|x64.Build.0 = Debug|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Debug|x86.ActiveCfg = Debug|Win32
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Debug|x86.Build.0 = Debug|Win32
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Release|Any CPU.ActiveCfg = Release|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Release|Any CPU.Build.0 = Release|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Release|x64.ActiveCfg = Release|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Release|x64.Build.0 = Release|x64
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Release|x86.ActiveCfg = Release|Win32
-		{1E10DA3D-2DDC-403D-A07D-EA0788DA1995}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
