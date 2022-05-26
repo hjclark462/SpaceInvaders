@@ -5,11 +5,17 @@
 #include "raylib.h"
 #include <string>
 #include <vector>
+#include <time.h>
 class Game
 {
 public:
+	float currentTime;
+	float previousTime;
+	float deltaTime = 0.0f;
 	Player player;
 	Bullet bullet[NUM_BULLET_COUNT];
+	Bullet enemyBullet[NUM_ENEMY_BULLETS];
+	float fireTime = 0.0f;
 	std::vector<Enemy> enemy;
 	int enemyRows = 5;
 	int enemyCols = 11;
@@ -18,8 +24,9 @@ public:
 	bool allMoved = false;
 	int score = 0;	
 	int screenWidth = 800;
-	int screenHeight = 450;
+	int screenHeight = 450;	
 	void InitGame();
+	void GetDeltaTime();
 	void UpdateGame();
 	void DrawGame();
 };

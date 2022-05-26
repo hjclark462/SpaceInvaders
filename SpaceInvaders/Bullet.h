@@ -7,6 +7,6 @@ struct Bullet
 	Rectangle rectangle;
 	Vector2 position;
 	Vector2 speed;
-	bool flying;
+	bool fired;
 	Color colour;
 };

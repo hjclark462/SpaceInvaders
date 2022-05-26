@@ -27,15 +27,17 @@
 
 int main(int argc, char* argv[])
 {
-    // Initialization    
-    Game test;
-    test.InitGame();
-    // Main game loop
-    while (!WindowShouldClose())    // Detect window close button or ESC key
-    {
-        test.UpdateGame();
-        test.DrawGame();
-    }        
-    CloseWindow();  
-    return 0;
+	// Initialization    
+	Game test;
+	test.InitGame();
+	// Main game loop
+	while (!WindowShouldClose())    // Detect window close button or ESC key
+	{
+		test.GetDeltaTime();
+		test.DrawGame();
+		test.UpdateGame();
+		test.previousTime = test.currentTime;
+	}
+	CloseWindow();
+	return 0;
 }
