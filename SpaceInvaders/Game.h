@@ -11,11 +11,11 @@ class Game
 public:
 	float currentTime;
 	float previousTime;
-	float deltaTime = 0.0f;
-	float fps;
+	float deltaTime = 0.0f;	
 	Player player;
 	Bullet bullet[NUM_BULLET_COUNT];
 	Bullet enemyBullet[NUM_ENEMY_BULLETS];
+	int startCounter = 0;
 	std::vector<Enemy> enemy;
 	int enemyRows = 5;
 	int enemyCols = 11;

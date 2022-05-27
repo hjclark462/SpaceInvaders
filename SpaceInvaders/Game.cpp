@@ -74,8 +74,7 @@ void Game::InitGame()
 void Game::GetDeltaTime()
 {
 	currentTime = clock();
-	deltaTime = currentTime - previousTime;
-	fps = (1 / deltaTime) * 1000;
+	deltaTime = currentTime - previousTime;	
 }
 
 void Game::UpdateGame()
@@ -116,6 +115,7 @@ void Game::UpdateGame()
 	}
 
 	//	Player bullet movement
+	
 	for (int i = 0; i < NUM_BULLET_COUNT; i++)
 	{
 		if (bullet[i].fired)
@@ -156,26 +156,35 @@ void Game::UpdateGame()
 			}
 		}
 	}
+
 	//	Enemy firing bullets 
-	for (int i = 0; i < NUM_ENEMY_COUNT; i++)
+	if (startCounter > 100)
 	{
-		enemy[i].fireTime -= deltaTime;
-		int rando = rand() % 11;
-		if (enemy[i].fireTime <= 0 && rando == 0 && (i >= NUM_ENEMY_COUNT - 11 || !enemy[i + 11].isAlive))
+		for (int i = 0; i < NUM_ENEMY_COUNT; i++)
 		{
-			for (int j = 0; j < NUM_ENEMY_BULLETS; j++)
+			enemy[i].fireTime -= deltaTime;
+			int rando = rand() % 11;
+			if (enemy[i].fireTime <= 0 && rando == 0 && (i >= NUM_ENEMY_COUNT - 11 || !enemy[i + 11].isAlive))
 			{
-				if (!enemyBullet[j].fired)
+				for (int j = 0; j < NUM_ENEMY_BULLETS; j++)
 				{
-					enemyBullet[j].rectangle.x = enemy[i].center.x;
-					enemyBullet[j].rectangle.y = enemy[i].center.y;
-					enemyBullet[j].fired = true;
-					break;
+					if (!enemyBullet[j].fired)
+					{
+						enemyBullet[j].rectangle.x = enemy[i].center.x;
+						enemyBullet[j].rectangle.y = enemy[i].center.y;
+						enemyBullet[j].fired = true;
+						break;
+					}
 				}
-			}			
-			enemy[i].fireTime = 4.0f;
-		}		
+				enemy[i].fireTime = 4.0f;
+			}
+		}
 	}
+	else
+	{
+		startCounter++;
+	}
+	
 	//	Moving the Enemies
 	allMoved = false;
 	while (!allMoved)
@@ -267,7 +276,7 @@ void Game::DrawGame()
 			DrawRectangleRec(enemyBullet[i].rectangle, enemyBullet[i].colour);
 		}
 	}
-	DrawText(std::to_string(score).c_str(), 40, 40, 15, RED);
-	DrawText(std::to_string(fps).c_str(), 40, 50, 20, GREEN);
+
+	DrawText(std::to_string(score).c_str(), 40, 40, 15, RED);	
 	EndDrawing();
 }
