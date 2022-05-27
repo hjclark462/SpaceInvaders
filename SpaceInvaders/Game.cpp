@@ -75,7 +75,7 @@ void Game::GetDeltaTime()
 {
 	currentTime = clock();
 	deltaTime = currentTime - previousTime;
-
+	fps = (1 / deltaTime) * 1000;
 }
 
 void Game::UpdateGame()
@@ -160,23 +160,20 @@ void Game::UpdateGame()
 	for (int i = 0; i < NUM_ENEMY_COUNT; i++)
 	{
 		enemy[i].fireTime -= deltaTime;
-		int rando = rand() % 100;
-		if (fireTime <= 0 && rando == 0 && (i > NUM_ENEMY_COUNT - 11 || !enemy[i + 11].isAlive))
+		int rando = rand() % 11;
+		if (enemy[i].fireTime <= 0 && rando == 0 && (i >= NUM_ENEMY_COUNT - 11 || !enemy[i + 11].isAlive))
 		{
 			for (int j = 0; j < NUM_ENEMY_BULLETS; j++)
 			{
-				if (enemyBullet[j].fired)
-				{					
-					break;
-				}
-				else
+				if (!enemyBullet[j].fired)
 				{
 					enemyBullet[j].rectangle.x = enemy[i].center.x;
 					enemyBullet[j].rectangle.y = enemy[i].center.y;
 					enemyBullet[j].fired = true;
+					break;
 				}
 			}			
-			fireTime = 4.0f + (rand() % 60);
+			enemy[i].fireTime = 4.0f;
 		}		
 	}
 	//	Moving the Enemies
@@ -217,22 +214,26 @@ void Game::UpdateGame()
 	//	Calculates the movement of the bullet
 	for (int j = 0; j < NUM_ENEMY_BULLETS; j++)
 	{
-		enemyBullet[j].rectangle.y += enemyBullet[j].speed.y * deltaTime;
-		//	If it leaves the screen set it dead
-		if (enemyBullet[j].rectangle.y >= screenHeight)
+		if (enemyBullet[j].fired)
 		{
-			enemyBullet[j].fired = false;
-		}
-		//	Bullet shot the enemy and killed it!
-		if (CheckCollisionRecs(enemyBullet[j].rectangle, player.rectangle))
-		{
-			enemyBullet[j].fired = false;
-			player.lives--;
-			if (player.lives <= 0)
+			enemyBullet[j].rectangle.y += enemyBullet[j].speed.y * deltaTime;
+			//	If it leaves the screen set it dead
+			if (enemyBullet[j].rectangle.y >= screenHeight)
 			{
-				CloseWindow();
+				enemyBullet[j].fired = false;
+			}
+			//	Bullet shot the enemy and killed it!
+			if (CheckCollisionRecs(enemyBullet[j].rectangle, player.rectangle))
+			{
+				enemyBullet[j].fired = false;
+				player.lives--;
+				if (player.lives <= 0)
+				{
+					CloseWindow();
+				}
 			}
 		}
+		
 	}
 }
 
@@ -267,5 +268,6 @@ void Game::DrawGame()
 		}
 	}
 	DrawText(std::to_string(score).c_str(), 40, 40, 15, RED);
+	DrawText(std::to_string(fps).c_str(), 40, 50, 20, GREEN);
 	EndDrawing();
 }

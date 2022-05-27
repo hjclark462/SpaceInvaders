@@ -12,10 +12,10 @@ public:
 	float currentTime;
 	float previousTime;
 	float deltaTime = 0.0f;
+	float fps;
 	Player player;
 	Bullet bullet[NUM_BULLET_COUNT];
 	Bullet enemyBullet[NUM_ENEMY_BULLETS];
-	float fireTime = 0.0f;
 	std::vector<Enemy> enemy;
 	int enemyRows = 5;
 	int enemyCols = 11;
