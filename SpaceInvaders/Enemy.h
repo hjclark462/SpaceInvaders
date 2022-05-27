@@ -9,5 +9,5 @@ public:
 	float fireTime = 4.0f;
 	bool isAlive = false;
 	Vector2 speed = {0.0f, 0.0f};
-	Color colour = RED;		
+	Color colour = BLUE;		
 };

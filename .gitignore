@@ -399,3 +399,5 @@ FodyWeavers.xsd
 *.sln.iml
 *.db
 .vs/SpaceInvaders/v17/.suo
+.vs/SpaceInvaders/v17/.suo
+*.db
