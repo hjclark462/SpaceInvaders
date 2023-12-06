@@ -1,2 +1,4 @@
 .vs/
 x64/
+!*/64/Debug/raylib.lib
+!*/64/Release/raylib.lib
